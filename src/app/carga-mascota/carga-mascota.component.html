@@ -1,0 +1,26 @@
+<!-- 1- Crear un componente 'carga-mascota' que nos permita cargar nombre, imagen (con inputs)
+ y tipo (con select) y que devuelva por medio de un output los datos cargados. -->
+
+<div>
+    
+        <div class="form-group">
+            <label for="nombre">NOMBRE:</label>
+            <input type="text" name="nombre"  class="form-control" [(ngModel)]="mascota.nombre">
+        </div>
+        <div class="form-group">
+        <label for="foto">FOTO:</label>
+        <input type="file" name="foto" class="form-control" [(ngModel)]="mascota.foto">
+    </div>
+    <div class="form-group">
+        <label for="tipo">TIPO:</label>
+        <select id="tipo" [(ngModel)]="mascota.tipo">
+            <option disabled selected>SELECCIONAR...</option>
+            <option value="perro">PERRO</option>
+            <option value="gato">GATO</option>
+            <option value="pez">PEZ</option>
+        </select>
+    </div>
+        <input type="button" (click)="guardar(mascota)" value="CARGAR" class="btn btn-success">
+    
+</div>
+<!-- <div><app-listado [mascotas]="mascotas"></app-listado></div> -->
